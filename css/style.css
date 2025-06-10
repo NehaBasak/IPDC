@@ -107,33 +107,45 @@ nav,
 }
 /* Banner Section */
 .banner-section {
-  position: relative;
-  min-height: 600px;
+  min-height: 520px;
   margin-bottom: 50px;
 }
 .col {
   width: 50%;
 }
 .banner-img {
-  max-width: 710px;
-  min-height: 682px;
+  max-width: 800px;
   object-fit: contain;
+  position: relative;
 }
 .banner-img > a > img {
   width: 100%;
   height: 100%;
 }
-.banner-img {
+.banner-back {
   position: absolute;
-  z-index: -1;
-  top: -106px;
-  right: 100px;
+  z-index: -11;
+  bottom: 35px;
+  left: -35px;
+  height: 200%;
+  width: 200%;
+  background: url(../assets/Big.png) top / cover no-repeat;
 }
-.banner-text {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 100px;
+.banner-img::before {
+  background: url(../assets/Frame30.png) center/contain no-repeat;
+  height: 71px;
+  max-width: 204px;
+  right: 0;
+  top: 71px;
+  z-index: 1;
+}
+.banner-img::after {
+  background: url(../assets/Frame20.png) center / contain no-repeat;
+  height: 71px;
+  max-width: 204px;
+  top: 0;
+  left: calc(-104px / 2);
+  z-index: 1;
 }
 .banner-text > h1 {
   font-size: 60px;
@@ -211,16 +223,17 @@ nav,
 }
 
 /* Customer Box Section */
+.cutomer-box-section {
+  margin-bottom: 100px;
+}
 .col4 {
   width: 25%;
 }
 .box {
-  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 260px;
-  min-height: 230px;
+  margin-bottom: 30px;
 }
 .box > h3 {
   font-size: 22px;
@@ -312,6 +325,151 @@ nav,
   object-fit: contain;
 }
 
+/* Service Section */
+.service-section {
+  padding-top: 100px;
+  background-color: rgba(252, 224, 239, 0.2);
+}
+
+/* Service Card Section */
+.col04 {
+  width: 25%;
+}
+.service-card-section {
+  background-color: rgba(252, 224, 239, 0.2);
+  padding-bottom: 100px;
+}
+.service-img > a > img {
+  max-width: 250px;
+  min-height: 365px;
+  object-fit: contain;
+}
+.right-arrow > img {
+  max-width: 35px;
+  min-height: 35px;
+  object-fit: contain;
+}
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.service-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.service-text > p {
+  font-size: 20px;
+}
+/* Yes Section */
+.year-section {
+  padding-top: 100px;
+}
+
+/* Year Card Section */
+.box > h2 {
+  font-size: 40px;
+  color: var(--primary-clr);
+}
+.box > h2:hover {
+  color: var(--secondary-clr);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background-color: rgba(252, 224, 239, 0.2);
+  padding-block: 100px;
+}
+.newsletter-section > div > div {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.newsletter-section > div > div > h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.newsletter-section > div > div > p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: var(--third-clr);
+  text-align: center;
+}
+.newsletter-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.newsletter-btn > a {
+  background: var(--secondary-clr);
+  padding: 12px 15px;
+  border-radius: 4px;
+  color: var(--forth-clr);
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.newsletter-box > input {
+  padding: 12px 15px;
+  width: 300px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid var(--third-clr);
+  background-color: var(--forth-clr);
+}
+
+/* Footer Section */
+.footer-section {
+  padding-block: 60px;
+}
+.col5 {
+  width: 20%;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-text > h4 {
+  font-size: 16px;
+  color: var(--primary-clr);
+}
+.footer-text > p {
+  font-size: 12px;
+  color: var(--third-clr);
+}
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+.col5 > ul > li > h4 {
+  font-size: 16px;
+  color: var(--primary-clr);
+}
+.col5 > ul > li {
+  font-size: 12px;
+  color: var(--third-clr);
+  margin-bottom: 20px;
+}
+.footer-call {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-call > h4 {
+  font-size: 16px;
+}
+.call-section > img {
+  max-width: 24px;
+  min-height: 24px;
+  object-fit: contain;
+}
+.footer-social-img > a > img {
+  max-width: 24px;
+  min-height: 24px;
+  object-fit: contain;
+}
 @media screen and (max-width: 1050px) {
   /* Header Section */
   .header-section {
@@ -353,7 +511,12 @@ nav,
     align-items: center;
   }
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1024px) {
+  /* Header Section */
+  .nav-right {
+    gap: 40px;
+  }
+
   /* Banner Section */
   .small-banner-img > a > img {
     max-width: 610px;
@@ -366,17 +529,6 @@ nav,
   .banner-img {
     display: none;
   }
-  .banner-text {
-    padding-top: 60px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  /* Header Section */
-  .nav-right {
-    gap: 40px;
-  }
-
-  /* Banner Section */
   .banner-section > div > div {
     flex-direction: column-reverse;
   }
@@ -386,10 +538,10 @@ nav,
     justify-content: center;
     align-items: center;
   }
-  .banner-text {
-    padding-top: 40px;
+  /* Customer Box Section */
+  .cutomer-box-section {
+    margin-bottom: 80px;
   }
-
   /* IPDC Glance Section */
   .glance Section > div > div {
     flex-direction: column;
@@ -402,6 +554,36 @@ nav,
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  /* Service Section */
+  .service-section {
+    padding-top: 80px;
+  }
+
+  /* Service Card Section */
+  .col04 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .service-card-section {
+    padding-bottom: 80px;
+  }
+  .service-card-section > div > div {
+    row-gap: 20px;
+  }
+
+  /* Year Section */
+  .year-section {
+    padding-top: 80px;
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: rgba(252, 224, 239, 0.2);
+    padding-block: 80px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -418,9 +600,6 @@ nav,
     max-width: 550px;
     min-height: 582px;
     object-fit: contain;
-  }
-  .banner-text {
-    padding-top: 20px;
   }
   .banner-text > h1 {
     font-size: 40px;
@@ -441,11 +620,16 @@ nav,
   }
 
   /* Customer Box Section */
+  .cutomer-box-section {
+    margin-bottom: 40px;
+  }
   .col4 {
     width: 50%;
   }
-  .cutomer-box-section > div > div {
-    row-gap: 30px;
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   /* Business Section */
@@ -455,11 +639,52 @@ nav,
   .business-partners-section > div > p {
     margin-bottom: 40px;
   }
+
   /* IPDC Glance Section */
   .glance-img > img {
     max-width: 420px;
     min-height: 510px;
     object-fit: contain;
+  }
+
+  /* Service Section */
+  .service-section {
+    padding-top: 40px;
+  }
+
+  /* Service Card Section */
+  .service-card-section {
+    padding-bottom: 40px;
+  }
+  .right-arrow > img {
+    max-width: 25px;
+    min-height: 25px;
+    object-fit: contain;
+  }
+
+  /* Year Section */
+  .year-section {
+    padding-top: 40px;
+  }
+
+  /* Year Card Section */
+  .box > h2 {
+    font-size: 30px;
+    color: var(--primary-clr);
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: rgba(252, 224, 239, 0.2);
+    padding-block: 40px;
+  }
+
+  /* Footer Section */
+  .footer-section {
+    padding-block: 30px;
+  }
+  .col5 {
+    width: 50%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -541,17 +766,11 @@ nav,
   }
 
   /* Customer Box Section */
-  .col4 {
-    width: 100%;
-  }
-  .cutomer-box-section > div > div {
-    row-gap: 10px;
+  .cutomer-box-section {
+    margin-bottom: 10px;
   }
   .box {
-    padding: 15px;
     gap: 10px;
-    max-width: 200px;
-    min-height: 100px;
   }
   .box > h3 {
     font-size: 20px;
@@ -570,7 +789,6 @@ nav,
     padding-block: 20px;
     background-color: rgba(252, 224, 239, 0.2);
   }
-
   .business-partners-section > div > p {
     font-size: 18px;
     margin-bottom: 20px;
@@ -605,5 +823,91 @@ nav,
     max-width: 20px;
     min-height: 20px;
     object-fit: contain;
+  }
+
+  /* Service Section */
+  .service-section {
+    padding-top: 20px;
+  }
+
+  /* Service Card Section */
+  .service-card-section {
+    padding-bottom: 20px;
+  }
+  .col04 {
+    width: 100%;
+  }
+
+
+  /* Year Section */
+  .year-section {
+    padding-top: 20px;
+  }
+
+  /* Year Card Section */
+  .box > h2 {
+    font-size: 25px;
+    color: var(--primary-clr);
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    background-color: rgba(252, 224, 239, 0.2);
+    padding-block: 20px;
+  }
+  .newsletter-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .newsletter-section > div > div > h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .newsletter-section > div > div > p {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  .newsletter-btn > a {
+    background: var(--secondary-clr);
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .newsletter-box > input {
+    padding: 10px 12px;
+    width: 250px;
+  }
+
+  /* Footer Section */
+  .footer-section {
+    padding-block: 20px;
+  }
+  .call-section > img {
+    max-width: 18px;
+    min-height: 18px;
+  }
+  .footer-social-img > a > img {
+    max-width: 18px;
+    min-height: 18px;
+  }
+  .footer-text > h4 {
+    font-size: 12px;
+  }
+  .footer-text > p {
+    font-size: 10px;
+  }
+  .footer-social {
+    gap: 15px;
+  }
+  .col5 > ul > li > h4 {
+    font-size: 12px;
+  }
+  .col5 > ul > li {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .footer-call > h4 {
+    font-size: 12px;
   }
 }
