@@ -503,6 +503,17 @@ nav,
     background-color: rgba(224, 158, 214, 0.3);
     backdrop-filter: blur(10px);
     padding: 10px 0;
+    animation: dropdown 1 500ms forwards linear;
+  }
+  @keyframes dropdown{
+    from{
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   .nav-right > ul {
     flex-direction: column;
@@ -835,6 +846,9 @@ nav,
     max-width: 20px;
     min-height: 20px;
     object-fit: contain;
+  }
+  .col40{
+    margin-bottom: 10px;
   }
 
   /* Service Section */
