@@ -119,33 +119,33 @@ nav,
   position: relative;
 }
 .banner-img > a > img {
-  width: 100%;
+  width: 120%;
   height: 100%;
 }
 .banner-back {
   position: absolute;
   z-index: -11;
-  bottom: 35px;
-  left: -35px;
+  bottom: -45px;
+  left: -15px;
   height: 200%;
-  width: 200%;
+  width: 130%;
   background: url(../assets/Big.png) top / cover no-repeat;
 }
-.banner-img::before {
-  background: url(../assets/Frame30.png) center/contain no-repeat;
-  height: 71px;
-  max-width: 204px;
-  right: 0;
-  top: 71px;
-  z-index: 1;
+.banner-up > img {
+  max-width: 250px;
+  min-height: 90px;
+  object-fit: contain;
+  position: absolute;
+  top: 95px;
+  right: -150px;
 }
-.banner-img::after {
-  background: url(../assets/Frame20.png) center / contain no-repeat;
-  height: 71px;
-  max-width: 204px;
-  top: 0;
-  left: calc(-104px / 2);
-  z-index: 1;
+.banner-down > img {
+  max-width: 250px;
+  min-height: 90px;
+  object-fit: contain;
+  position: absolute;
+  top: 10px;
+  left: -150px;
 }
 .banner-text > h1 {
   font-size: 60px;
@@ -339,7 +339,7 @@ nav,
   background-color: rgba(252, 224, 239, 0.2);
   padding-bottom: 100px;
 }
-.service-img > a > img {
+.service-img > img {
   max-width: 250px;
   min-height: 365px;
   object-fit: contain;
@@ -363,6 +363,7 @@ nav,
 .service-text > p {
   font-size: 20px;
 }
+
 /* Yes Section */
 .year-section {
   padding-top: 100px;
@@ -624,7 +625,7 @@ nav,
     margin-bottom: 40px;
   }
   .col4 {
-    width: 50%;
+    width: 33.33%;
   }
   .box {
     display: flex;
@@ -660,6 +661,14 @@ nav,
     max-width: 25px;
     min-height: 25px;
     object-fit: contain;
+  }
+  .service-img > img {
+    max-width: 200px;
+    min-height: 265px;
+    object-fit: contain;
+  }
+  .service-text > p {
+    font-size: 15px;
   }
 
   /* Year Section */
@@ -783,6 +792,9 @@ nav,
     min-height: 25px;
     object-fit: contain;
   }
+  .col4 {
+    width: 50%;
+  }
 
   /* Business Section */
   .business-partners-section {
@@ -834,10 +846,19 @@ nav,
   .service-card-section {
     padding-bottom: 20px;
   }
-  .col04 {
-    width: 100%;
+  .right-arrow > img {
+    max-width: 15px;
+    min-height: 15px;
+    object-fit: contain;
   }
-
+  .service-img > img {
+    max-width: 150px;
+    min-height: 165px;
+    object-fit: contain;
+  }
+  .service-text > p {
+    font-size: 12px;
+  }
 
   /* Year Section */
   .year-section {
